@@ -3,7 +3,7 @@ A FE implementation of absorbing/silent boundary; water-solid mixture implementa
 
 The main subroutines are written in main_driver_program.f90. Use that as a starting point.
 
-The file interface_files.f90 contains subroutines to call a plaxis dll. #Removed here for copyright reasons.
+The file interface_files.f90 contains subroutines to call a plaxis dll. **Removed here for copyright reasons.**
 
 An example input file is provided in input.dat.
 
