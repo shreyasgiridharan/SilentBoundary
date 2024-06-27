@@ -1,6 +1,6 @@
     module modulefem
     !*********************************************************************
-    !    Function:
+    !    Function: Initialise all variable. 
     !**********************************************************************
 
 
@@ -35,7 +35,7 @@
 
     subroutine solve()
     !**********************************************************************
-    !    Function:
+    !    Function: Run over loop to solve
     !**********************************************************************
 
     implicit none
@@ -92,7 +92,7 @@
 
     subroutine readdata()
     !**********************************************************************
-    !    Function: Make a file
+    !    Function: Read input data
     !**********************************************************************
 
     implicit none
@@ -358,9 +358,6 @@
         end if
      end do
      
-    !if(itime.eq.300001.or.itime.eq.350001.or.itime.eq.400001.or.itime.eq.450001.or.itime.eq.500001.or.itime.eq.550001.or.itime.eq.600001.or.itime.eq.650001.or.itime.eq.700001.or.itime.eq.750001) then 
-    !if(itime.eq.300001.or.itime.eq.400001.or.itime.eq.500001.or.itime.eq.600001.or.itime.eq.700001) then 
-    !if(itime.eq.30001.or.itime.eq.40001.or.itime.eq.50001.or.itime.eq.60001.or.itime.eq.70001.or.itime.eq.80001.or.itime.eq.90001) then 
     !if(itime.eq.1) then 
         do I = 1,Nnod
             if(NodCo(2,i).eq.1.d0) then
@@ -519,15 +516,6 @@
 
     dis = dis + v * dt
     v0 = v
-
-    ! Node-co updated
-    !              do J = 1, Nnod
-    !                  Id = (J - 1) * 2
-    !                  NodCo(1, J) = NodCo(1, J) + v(Id + 1) * dt
-    !                  NodCo(2, J) = NodCo(2, J) + v(Id + 2) * dt
-    !              enddo
-    !
-    !              call initial()
 
     end subroutine Update
 
@@ -894,7 +882,7 @@
     subroutine WtRES(IStep)
     !**********************************************************************
     !
-    !    Function:
+    !    Function: Write GiD results
     !
     !**********************************************************************
 
